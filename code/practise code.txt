@@ -1,0 +1,34 @@
+1) to launch page
+test.only('Browser Context Playwright test', async ({Browser})=>
+{
+    chrome - plugins/ cookies
+    const Context = await Browser.newContext();
+    const page = await Context.newPage();
+    await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
+});
+
+test('Page Playwright test', async ({page})=>
+{
+    await page.goto("https://google.com");
+    
+});
+
+
+2) to get the title by assertion
+
+test('Brower Context Playwright test', async ({browser})=>
+   { const context = await browser.newContext();
+      const page = await context.newPage();
+      await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+      console.log(await page.title());
+   } 
+
+);
+
+test('Page Playwright test', async ({page})=>
+{
+    await page.goto("https://google.com");
+    console.log(await page.title());
+    await expect (page).toHaveTitle("Google");
+
+});
